@@ -1,10 +1,12 @@
 const router = require("express").Router();
+const userCtrl = require("../controllers/userCtrl");
+const auth = require("../middleware/auth");
 
-router.post("/register", (req, res) => {
-  res.json({ msg: "Register a User" });
-});
+router.post("/register", userCtrl.registerUser);
 
-router.post("/login", (req, res) => {
-  res.json({ msg: "Login a User" });
-});
+router.post("/login", userCtrl.loginUser);
+
+//verifying token
+router.get("/verify", userCtrl.verifiedToken);
+
 module.exports = router;
