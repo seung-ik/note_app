@@ -23,7 +23,7 @@ function App() {
     };
     checkLogin();
   });
-  return <div className="App">{isLogin ? <Note /> : <Login setIsLogin={setIsLogin} />}</div>;
+  return <div className="App">{isLogin ? <Note setIsLogin={setIsLogin} /> : <Login setIsLogin={setIsLogin} />}</div>;
 }
 
 export default App;
