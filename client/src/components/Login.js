@@ -58,7 +58,7 @@ const Login = ({ setIsLogin }) => {
   return (
     <div>
       <section>
-        <div className="login">
+        <div className="login create-note">
           <h2>Login</h2>
           <form onSubmit={onSubmitLogin}>
             <input onChange={onChangeInput} type="email" name="email" required id="login-email" placeholder="Email" value={user.email} />
@@ -79,7 +79,7 @@ const Login = ({ setIsLogin }) => {
             </p>
           </form>
         </div>
-        <div className="register">
+        <div className="register create-note">
           <h2>Register</h2>
           <form onSubmit={onSubmitRegister}>
             <input type="name" name="name" required id="login-name" placeholder="Name" value={user.name} onChange={onChangeInput} />
